@@ -1,0 +1,21 @@
+name: Docker CI Pipeline
+on:
+  push:
+    branches: [ feature_actions ]
+
+
+jobs:
+  docker-ci-pipeline:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+      - name: Docker Login
+        uses: docker/login-action@v3.4.0
+        with:
+          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          password: ${{ secrets.DOCKER_GITHUB_ACTIONS_TOKEN }}
+
+     
+      
+      
