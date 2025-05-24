@@ -24,13 +24,12 @@ jobs:
         with:
           images: cmuriukin/new-era-class-23
 
-      # - name: Build and push Docker images
-      #   uses: docker/build-push-action@v6.17.0
-      #   with:
-      #     context: .
-      #     push: true
-      #     tags: 
-          
+      - name: Build and push Docker images
+        uses: docker/build-push-action@v6.17.0
+        with:
+          context: .
+          push: true
+          tags: ${{ steps.metadata_gen.outputs.tags }}
 
       
           
