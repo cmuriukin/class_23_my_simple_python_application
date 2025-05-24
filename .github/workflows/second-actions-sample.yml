@@ -1,7 +1,7 @@
 name: Multi steps workflow
 on:
   push:
-    branches: [ feature_actions ]
+    branches: [ main ]
   pull_request:
     branches: [ main ]
 
