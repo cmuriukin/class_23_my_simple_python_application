@@ -1,0 +1,11 @@
+name: sample-actions
+on: push
+jobs:
+  my-sample-task:
+    runs-on: ubuntu-latest
+    steps:
+      - name: My First Actions Task 1
+        run: sleep 30
+      - name: My First Actions Task 2
+        run: echo "My first Actions print message"
+  
