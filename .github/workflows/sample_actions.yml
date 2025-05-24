@@ -1,5 +1,8 @@
 name: sample-actions
-on: push
+on:
+  push:
+    branches: [ main ]
+
 jobs:
   my-sample-task:
     runs-on: ubuntu-latest
